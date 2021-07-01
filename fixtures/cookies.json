@@ -1,0 +1,22 @@
+[
+    {
+        "id": 2,
+        "location": "new",
+        "description": "one",
+        "hourly_sales": 55,
+        "minimum_customers_per_hour": 1,
+        "maximum_customers_per_hour": 2,
+        "average_cookies_per_sale": 1.0,
+        "owner": 3
+    },
+    {
+        "id": 3,
+        "location": "what",
+        "description": "in the",
+        "hourly_sales": 55,
+        "minimum_customers_per_hour": 1,
+        "maximum_customers_per_hour": 2,
+        "average_cookies_per_sale": 1.0,
+        "owner": 3
+    }
+]
