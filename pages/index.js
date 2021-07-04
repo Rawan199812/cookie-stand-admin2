@@ -1,13 +1,9 @@
 import {Head} from '../component/Head';
 import {Header}  from '../component/Header';
-// import {Main}  from '../component/Main';
-// import {ReportTable}  from '../component/Main';
 
-// import {Footer}  from '../component/Footer';
-// import {ReportTable} from '../component/Table';
 import { hours } from './data'
 import { useState } from 'react'
-// import Head from 'next/head'
+
 
 
 
@@ -54,24 +50,6 @@ export default function Home() {
    
 function Main (){
 
-  // const [location,setLocation] = useState();
-  // const [max,setMax] = useState();
-  // const [min,setMin] = useState();
-  // const [avgCookie,setAvgCookie] = useState();
-  // function CookeiHandler(e){
-  //     e.preventDefault();
-  //     setLocation(e.target.location.value);
-  //     setMin(e.target.min.value);
-  //     setMax(e.target.max.value);
-  //     setAvgCookie(e.target.avgCookie.value);
-  //   }
-  // const json = {
-  //     "location": location,
-  //     "minCustomers": min,
-  //     'maxCustomers': max,
-  //     'avgCookies': avgCookie,
-  // }
-  // const data = JSON.stringify(json)
   return (
     
    <form onSubmit = {(e)=>onCreate(e)} className="bg-green-200">
