@@ -21,24 +21,7 @@ export const Main = () => {
     }
     setStands([...stands, newStands])
   }
-    // const [location,setLocation] = useState();
-    // const [max,setMax] = useState();
-    // const [min,setMin] = useState();
-    // const [avgCookie,setAvgCookie] = useState();
-    // function CookeiHandler(e){
-    //     e.preventDefault();
-    //     setLocation(e.target.location.value);
-    //     setMin(e.target.min.value);
-    //     setMax(e.target.max.value);
-    //     setAvgCookie(e.target.avgCookie.value);
-    //   }
-    // const json = {
-    //     "location": location,
-    //     "minCustomers": min,
-    //     'maxCustomers': max,
-    //     'avgCookies': avgCookie,
-    // }
-    // const data = JSON.stringify(json)
+   
     return (
 
       
@@ -127,5 +110,5 @@ function ReportTable(props) {
       return(
         <h2>No Cookie Stands Available</h2>
       )
-    }
+     }
   }
