@@ -1,49 +1,43 @@
 import { useState } from 'react'
-import {Header} from './Header'
-import {Head} from 'next/head'
 
-export function LoginForm({ onSubmit }) {
+export default function Login({change}){
 
-    const initialValues = {
-        username: '',
-        password: '',
+    const [userName,setUserName] = useState("") 
+    const [password,setPassword] = useState("")
+
+    function changeUser(event){
+        setUserName(event.target.value)
     }
 
-    const [values, setValues] = useState(initialValues);
-
-    function submitHandler(event) {
-        event.preventDefault();
-        onSubmit(values);
-        setValues(initialValues)
+    function changePassword(event){
+        setPassword(event.target.value)
     }
 
-    function inputChangeHandler(event) {
-
-        let { name, value } = event.target;
-
-        setValues({ ...values, [name]: value });
+    function login(){
+        change(userName,password)
     }
 
     return (
-        <div>
-            {/* <Head>
-                <title>Cookie Stand Admin</title>
-            </Head>  */}
-             <Header title="Cookie Stand Admin"/>
-        <form onSubmit={submitHandler} className="flex flex-col uppercase text-center w-1/2 p-5 m-auto text-sm font-bold bg-green-200 border-2 border-green-400 rounded-md">
-            <div className="flex flex-col my-3">
-                <label htmlFor="username" className="mb-1">User Name</label>
-                <input className="text-lg py-1" type="text" name="username" id="username" value={values.username} onChange={inputChangeHandler} placeholder="User Name" />
-            </div>
-
-            <div className="flex flex-col my-3">
-                <label htmlFor="password" className="mb-1">password</label>
-                <input className="text-lg py-1" type="password" name="password" id="password" value={values.password} onChange={inputChangeHandler} placeholder="password" />
-            </div>
-
-            <button type="submit" className="p-3 my-3 uppercase bg-green-500 rounded">Sign In</button>
-
-        </form>
+        <div className="w-full flex justify-center pt-3 ">
+            <form className="px-8 pt-6 pb-8 mb-4 bg-green-200 rounded shadow-md " >
+                <div className="mb-4">
+                    <label className="block mb-2 text-sm font-bold text-gray-700" >
+                        Username
+                    </label>
+                    <input name="username" className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" onChange={changeUser}/>
+                </div>
+                <div className="mb-6">
+                    <label className="block mb-2 text-sm font-bold text-gray-700" >
+                        Password
+                    </label>
+                    <input name="password" className="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" onChange={changePassword}/>
+                </div>
+                <div className="flex items-center justify-center">
+                    <button onClick={login}  className="px-4 py-2 font-bold text-white bg-green-700 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="button">
+                        Sign In
+                    </button>
+                </div>
+            </form>
         </div>
     );
 }
