@@ -46,8 +46,8 @@ import Login from '../component/login-form'
 
 export default function Home() {
 
-  const [userName,setUserName] = useState('hisham')
-  const [savedPassword,setsavedPassword] = useState('password')
+  const [userName,setUserName] = useState('test')
+  const [savedPassword,setsavedPassword] = useState('test')
   const [logged,setLogged] = useState(false)
 
   function change(username,password){
