@@ -114,6 +114,7 @@ export default function Main(props) {
         setAvgCookie(event.target.value);
     }
 
+
     function deleteRow(event){
         event.preventDefault();
         setReport([])

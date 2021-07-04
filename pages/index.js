@@ -1,3 +1,4 @@
+
 // // import {Head} from '../component/Head';
 // // import {Header}  from '../component/Header';
 // // import { hours } from './data'
@@ -39,6 +40,7 @@
 // }
 
 
+
 import { useState } from 'react'
 import Admin from '../component/cookie-stand-admin'
 import Login from '../component/login-form'
@@ -61,4 +63,5 @@ export default function Home() {
       {logged ? <Admin username={userName} password={savedPassword}/> : <Login change={change}/>}
     </div>
   )
+
 }
