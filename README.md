@@ -1,6 +1,5 @@
 
-[Pull Request](https://github.com/Rawan199812/cookie-stand-admin2/pull/3)
-[Vercel URL]()
+[Vercel URL](https://cookie-stand-admin-azure.vercel.app/)
 
 
 
