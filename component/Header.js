@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 
-export function Header({ username, onLogout }) {
+export default function Header({ username, onLogout }) {
     return (
         <header className="flex justify-around p-4 mb-6 text-3xl bg-green-400">
             <h1 className="font-bold text-black"> Cookie Stand Admin </h1>
